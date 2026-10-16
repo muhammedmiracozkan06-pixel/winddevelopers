@@ -19,7 +19,7 @@
 <meta name="google-site-verification" content="AOjkO5IK5S6VUMw4ElCkUhm76u-BxYcvzF2sUktvgsA">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#eef4fb">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wind Developers | Simply Powerful">
 <meta property="og:description" content="Next-generation open-source projects and software ecosystems: WindexOS, Webrix, Matylo, WMail, WindStore, Wind Education.">
@@ -35,116 +35,183 @@
 {"@context":"https://schema.org","@type":"Organization","name":"Wind Developers","url":"https://winddevelopers.cc.cd/","logo":"https://winddevelopers.cc.cd/logo.png","description":"Wind Developers builds next-generation open-source software and AI-powered ecosystems including WindexOS, Webrix Browser, Matylo, WMail, WindStore and Wind Education.","foundingDate":"2025","sameAs":["https://developerswind.vercel.app/","https://windexos.vercel.app/"],"makesOffer":[{"@type":"Offer","name":"WindexOS","url":"https://windexos.vercel.app/"},{"@type":"Offer","name":"Webrix Browser","url":"https://webrixexp.vercel.app/"},{"@type":"Offer","name":"Matylo","url":"https://matylo.vercel.app/"},{"@type":"Offer","name":"WMail","url":"https://wmswmail.vercel.app/"},{"@type":"Offer","name":"WindStore","url":"https://windstore.base44.app/"},{"@type":"Offer","name":"Wind Education","url":"https://education.winddevelopers.cc.cd/"},{"@type":"Offer","name":"Developers Studio","url":"https://developerswind.vercel.app/"}]}
 </script>
 <style>
-:root{--bg:#fff;--surface:#f5f5f5;--ink:#161616;--soft:#505050;--line:#e0e0e0;--a:#0067b8;--a-d:#005a9e;--sans:'Segoe UI','Segoe UI Web (West European)',-apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',Arial,sans-serif;--ease:cubic-bezier(.33,0,.67,1)}
+:root{
+  --bg:#fff;--surface:#f4f7fb;--surface-2:#eaf0f7;--ink:#0f1c2e;--soft:#4b5b70;--line:#dce4ee;
+  --a:#0067b8;--a-d:#004f93;--a-l:#e6f1fb;--navy:#0a1930;--navy-2:#10294d;
+  --r:16px;--r-sm:10px;
+  --sans:'Segoe UI Variable','Segoe UI','Segoe UI Web (West European)',-apple-system,BlinkMacSystemFont,Inter,Roboto,'Helvetica Neue',Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --sh1:0 1px 2px rgba(15,28,46,.06),0 2px 8px rgba(15,28,46,.05);
+  --sh2:0 4px 12px rgba(15,28,46,.07),0 16px 40px rgba(15,28,46,.09);
+  --sh3:0 8px 20px rgba(15,28,46,.10),0 28px 60px rgba(15,28,46,.14);
+}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 [dir=rtl] body{direction:rtl}
 a{color:inherit}
+::selection{background:var(--a);color:#fff}
 
-/* floating round header */
-header{position:fixed;top:12px;left:0;right:0;z-index:1000;display:flex;justify-content:center;padding:0 14px;pointer-events:none}
-.nav-container{pointer-events:auto;width:100%;max-width:1100px;height:54px;padding:0 8px 0 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-radius:999px;background:rgba(255,255,255,.94);border:1px solid var(--line);backdrop-filter:blur(12px);box-shadow:0 2px 6px rgba(0,0,0,.08),0 8px 24px rgba(0,0,0,.08);transition:box-shadow .3s}
-header.scrolled .nav-container{box-shadow:0 4px 10px rgba(0,0,0,.1),0 14px 34px rgba(0,0,0,.12)}
-.logo-area{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:.95rem;white-space:nowrap}
-.logo-area img{height:22px;width:auto}
-.nav-right{display:flex;align-items:center;gap:4px}
-nav ul{display:flex;list-style:none}
-nav ul a{display:block;text-decoration:none;color:var(--ink);font-size:.85rem;padding:8px 16px;border-radius:999px;transition:background .15s}
-nav ul a:hover{background:var(--surface);color:var(--a)}
-.lang-switcher{position:relative}
-.lang-btn{background:none;border:1px solid var(--line);padding:7px 16px;font:600 .78rem var(--sans);cursor:pointer;border-radius:999px;color:var(--ink);transition:background .15s}
-.lang-btn:hover{background:var(--surface)}
-.lang-menu{display:none;position:absolute;top:calc(100% + 12px);right:0;min-width:170px;padding:6px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 30px rgba(0,0,0,.14)}
+/* ===== header ===== */
+header{position:fixed;top:14px;left:0;right:0;z-index:1000;display:flex;justify-content:center;padding:0 16px;pointer-events:none}
+.nav-container{pointer-events:auto;width:100%;max-width:1120px;height:58px;padding:0 9px 0 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-radius:999px;background:rgba(255,255,255,.82);border:1px solid rgba(220,228,238,.9);-webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);box-shadow:var(--sh1),0 12px 32px rgba(15,28,46,.07);transition:box-shadow .3s,background .3s}
+header.scrolled .nav-container{background:rgba(255,255,255,.94);box-shadow:var(--sh2)}
+.logo-area{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:700;font-size:.98rem;letter-spacing:-.01em;white-space:nowrap}
+.logo-area img{height:24px;width:auto}
+.nav-right{display:flex;align-items:center;gap:6px}
+nav ul{display:flex;list-style:none;gap:2px}
+nav ul a{display:block;text-decoration:none;color:var(--soft);font-size:.86rem;font-weight:600;padding:9px 16px;border-radius:999px;transition:background .2s,color .2s}
+nav ul a:hover{background:var(--surface);color:var(--ink)}
+nav ul a.active{color:var(--a);background:var(--a-l)}
+.lang-switcher{position:relative;margin-inline-start:6px}
+.lang-btn{background:var(--surface);border:1px solid var(--line);padding:8px 16px;font:700 .75rem var(--sans);letter-spacing:.05em;cursor:pointer;border-radius:999px;color:var(--ink);transition:background .2s,border-color .2s}
+.lang-btn:hover{background:var(--surface-2);border-color:#c9d5e3}
+.lang-menu{display:none;position:absolute;top:calc(100% + 14px);right:0;min-width:180px;padding:6px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--sh3)}
 [dir=rtl] .lang-menu{right:auto;left:0}
-.lang-menu.open{display:block;animation:pop .18s var(--ease)}
-@keyframes pop{from{opacity:0;transform:translateY(-4px)}}
-.lang-menu button{display:flex;justify-content:space-between;width:100%;padding:10px 14px;background:none;border:none;border-radius:10px;font:.85rem var(--sans);color:var(--ink);cursor:pointer;text-align:start}
-.lang-menu button:hover{background:var(--surface)}
-.lang-menu .code{color:var(--soft);font-size:.74rem}
+.lang-menu.open{display:block;animation:pop .2s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(-6px)}}
+.lang-menu button{display:flex;justify-content:space-between;width:100%;padding:10px 14px;background:none;border:none;border-radius:12px;font:500 .86rem var(--sans);color:var(--ink);cursor:pointer;text-align:start;transition:background .15s}
+.lang-menu button:hover{background:var(--a-l);color:var(--a-d)}
+.lang-menu .code{color:var(--soft);font-size:.72rem;font-weight:600;letter-spacing:.05em}
 
-/* hero */
-.hero{background:var(--surface);padding:150px 5% 84px;border-bottom:1px solid var(--line)}
-.hero-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-.eyebrow{display:block;font-size:.9rem;font-weight:600;color:var(--a);margin-bottom:16px}
-.hero h1{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:600;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
-.hero p{font-size:1.1rem;color:var(--soft);margin-bottom:30px;max-width:490px}
-.cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--a);color:#fff;padding:12px 26px;font-weight:600;font-size:.92rem;text-decoration:none;border-radius:4px;transition:background .15s}
-.cta-btn:hover{background:var(--a-d)}
-.cta-btn .arrow{transition:transform .2s}
-.cta-btn:hover .arrow{transform:translateX(3px)}
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:1100;background:linear-gradient(90deg,var(--a),#3da0ee);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+[dir=rtl] .progress{transform-origin:100% 50%}
+.menu-btn{display:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);cursor:pointer;align-items:center;justify-content:center;color:var(--ink);transition:background .2s}
+.menu-btn:hover{background:var(--surface-2)}
+.menu-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.mobile-menu{display:none;position:absolute;top:72px;left:16px;right:16px;max-width:1120px;margin:0 auto;padding:8px;border-radius:24px;background:rgba(255,255,255,.97);border:1px solid var(--line);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:var(--sh3);pointer-events:auto}
+.mobile-menu.open{display:block;animation:pop .2s var(--ease)}
+.mobile-menu a{display:block;padding:14px 18px;border-radius:16px;text-decoration:none;font-size:.96rem;font-weight:600;transition:background .15s,color .15s}
+.mobile-menu a:hover{background:var(--a-l);color:var(--a-d)}
+
+/* ===== hero ===== */
+.hero{position:relative;overflow:hidden;isolation:isolate;padding:172px 5% 104px;background:linear-gradient(180deg,#eef4fb 0%,#f8fafd 70%,#fff 100%);border-bottom:1px solid var(--line)}
+.hero::before,.hero::after{content:"";position:absolute;z-index:-1;border-radius:50%;filter:blur(80px);pointer-events:none}
+.hero::before{width:520px;height:520px;background:radial-gradient(circle,rgba(0,103,184,.22),transparent 70%);top:-180px;right:-120px;animation:drift 16s ease-in-out infinite alternate}
+.hero::after{width:460px;height:460px;background:radial-gradient(circle,rgba(61,160,238,.18),transparent 70%);bottom:-200px;left:-140px;animation:drift 20s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(48px,36px) scale(1.12)}}
+.hero-grid{position:relative;max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.hero-grid::before{content:"";position:absolute;inset:-60px -5%;z-index:-1;background-image:radial-gradient(rgba(15,28,46,.09) 1px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse at 30% 40%,#000 0%,transparent 70%);mask-image:radial-gradient(ellipse at 30% 40%,#000 0%,transparent 70%)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--a);background:var(--a-l);padding:7px 14px;border-radius:999px;margin-bottom:22px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--a);box-shadow:0 0 0 4px rgba(0,103,184,.18)}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4rem);font-weight:700;line-height:1.06;letter-spacing:-.035em;margin-bottom:22px;color:var(--navy)}
+.hero p{font-size:1.14rem;color:var(--soft);margin-bottom:34px;max-width:520px;line-height:1.7}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.cta-btn{display:inline-flex;align-items:center;gap:12px;background:var(--a);color:#fff;padding:14px 28px;font-weight:600;font-size:.94rem;text-decoration:none;border-radius:999px;box-shadow:0 1px 2px rgba(0,79,147,.3),0 8px 20px rgba(0,103,184,.28);transition:background .2s,transform .2s,box-shadow .2s}
+.cta-btn:hover{background:var(--a-d);transform:translateY(-1px);box-shadow:0 2px 4px rgba(0,79,147,.3),0 12px 28px rgba(0,103,184,.34)}
+.cta-btn .arrow{transition:transform .25s}
+.cta-btn:hover .arrow{transform:translateX(4px)}
 [dir=rtl] .cta-btn .arrow,[dir=rtl] .product-link .arrow{transform:scaleX(-1)}
-.hero-panel{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px 28px;box-shadow:0 1.6px 3.6px rgba(0,0,0,.13),0 .3px .9px rgba(0,0,0,.1)}
-.hero-panel-label{font-size:.8rem;color:var(--soft);font-weight:600;margin-bottom:10px}
-.stat-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-top:1px solid var(--line)}
+.ghost-btn{display:inline-flex;align-items:center;padding:13px 26px;font-weight:600;font-size:.94rem;text-decoration:none;border-radius:999px;border:1.5px solid #b9c7d8;color:var(--navy);background:rgba(255,255,255,.6);transition:background .2s,border-color .2s,color .2s}
+.ghost-btn:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.hero-panel{background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:22px;padding:28px 30px;box-shadow:var(--sh2)}
+.hero-panel-label{font-size:.74rem;color:var(--soft);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-top:1px solid var(--line)}
 .stat-row:first-of-type{border-top:none}
-.stat-row .name{font-weight:600;font-size:.95rem}
-.stat-row .val{font-size:.85rem;color:var(--a)}
+.stat-row .name{font-weight:700;font-size:.98rem;letter-spacing:-.01em}
+.stat-row .val{font-size:.84rem;font-weight:600;color:var(--a)}
+a.stat-row{text-decoration:none;color:inherit;margin:0 -14px;padding-left:14px;padding-right:14px;border-radius:12px;transition:background .2s}
+a.stat-row:hover{background:var(--a-l);border-color:transparent}
+a.stat-row .val{transition:transform .2s}
+a.stat-row:hover .val{transform:translateX(4px)}
+[dir=rtl] a.stat-row:hover .val{transform:translateX(-4px)}
 
-/* slideshow */
+/* ===== slideshow ===== */
 .slideshow-section{padding:0 5%}
-.slideshow{max-width:1100px;margin:0 auto;padding:56px 0 20px}
-.slideshow-viewport{position:relative;width:100%;aspect-ratio:16/7;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity .5s ease;pointer-events:none}
+.slideshow{max-width:1120px;margin:0 auto;padding:72px 0 24px}
+.slideshow-viewport{position:relative;width:100%;aspect-ratio:16/7;background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--sh3)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;pointer-events:none}
 .slide.active{opacity:1;pointer-events:auto}
-.slide img{width:100%;height:100%;object-fit:cover;display:block}
-.slide-arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.95);border:1px solid var(--line);color:var(--ink);font-size:1.2rem;cursor:pointer;z-index:2;transition:.15s}
-.slide-arrow:hover{background:var(--a);border-color:var(--a);color:#fff}
-.slide-arrow.prev{left:16px}.slide-arrow.next{right:16px}
-[dir=rtl] .slide-arrow.prev{left:auto;right:16px}[dir=rtl] .slide-arrow.next{right:auto;left:16px}
-.slide-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
-.slide-dot{width:8px;height:8px;border-radius:50%;background:#c8c8c8;border:none;cursor:pointer;padding:0;transition:.2s}
-.slide-dot.active{background:var(--a);width:22px;border-radius:4px}
+.slide img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.04);transition:transform 7s ease-out}
+.slide.active img{transform:scale(1)}
+.slide-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(220,228,238,.9);color:var(--ink);font-size:1.3rem;cursor:pointer;z-index:2;box-shadow:var(--sh1);transition:background .2s,color .2s,transform .2s}
+.slide-arrow:hover{background:var(--a);border-color:var(--a);color:#fff;transform:translateY(-50%) scale(1.06)}
+.slide-arrow.prev{left:18px}.slide-arrow.next{right:18px}
+[dir=rtl] .slide-arrow.prev{left:auto;right:18px}[dir=rtl] .slide-arrow.next{right:auto;left:18px}
+.slide-dots{display:flex;justify-content:center;gap:8px;margin-top:22px}
+.slide-dot{width:8px;height:8px;border-radius:999px;background:#c6d2e0;border:none;cursor:pointer;padding:0;transition:width .25s,background .2s}
+.slide-dot:hover{background:#9db0c7}
+.slide-dot.active{background:var(--a);width:26px}
 
-/* products */
-.products-section{max-width:1100px;margin:0 auto;padding:72px 5% 88px}
-.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px}
-.section-title{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:600;letter-spacing:-.01em}
-.section-sub{color:var(--soft);max-width:300px;font-size:.95rem;text-align:end}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
-.product-card{position:relative;background:#fff;border:1px solid var(--line);border-top:3px solid var(--a);border-radius:4px;padding:26px 26px 24px;display:flex;flex-direction:column;justify-content:space-between;min-height:230px;box-shadow:0 1.6px 3.6px rgba(0,0,0,.08);transition:box-shadow .2s,transform .2s}
-.product-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.14);transform:translateY(-2px)}
-.card-tag{font-size:.75rem;font-weight:600;color:var(--soft);margin-bottom:14px}
-.product-card h3{font-size:1.2rem;font-weight:600;margin-bottom:10px}
-.product-card p{color:var(--soft);font-size:.92rem;margin-bottom:22px;flex-grow:1}
-.product-link{color:var(--a);text-decoration:none;font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:8px}
-.product-link:hover span:first-child{text-decoration:underline}
-.product-link .arrow{transition:transform .2s}
-.product-card:hover .arrow{transform:translateX(4px)}
-[dir=rtl] .product-card:hover .arrow{transform:scaleX(-1) translateX(4px)}
+/* ===== products ===== */
+.products-section{max-width:1120px;margin:0 auto;padding:96px 5% 104px}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:48px}
+.section-title{font-size:clamp(1.8rem,3.2vw,2.4rem);font-weight:700;letter-spacing:-.025em;line-height:1.15;color:var(--navy)}
+.section-sub{color:var(--soft);max-width:320px;font-size:.98rem;text-align:end}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.product-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 28px 26px;display:flex;flex-direction:column;justify-content:space-between;min-height:250px;box-shadow:var(--sh1);transition:box-shadow .3s,transform .3s,border-color .3s}
+.product-card::before{content:"";position:absolute;inset:0;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(0,103,184,.09),transparent 70%);opacity:0;transition:opacity .3s;pointer-events:none}
+.product-card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--a),#3da0ee);transform:scaleX(0);transform-origin:0 50%;transition:transform .4s var(--ease)}
+[dir=rtl] .product-card::after{transform-origin:100% 50%}
+.product-card:hover{box-shadow:var(--sh3);transform:translateY(-4px);border-color:#c5d6e8}
+.product-card:hover::before{opacity:1}
+.product-card:hover::after{transform:scaleX(1)}
+.card-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.card-icon{width:44px;height:44px;border-radius:12px;background:var(--a-l);color:var(--a);display:grid;place-items:center;transition:background .3s,color .3s,transform .3s}
+.card-icon svg,.p-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.product-card:hover .card-icon{background:var(--a);color:#fff;transform:rotate(-6deg) scale(1.05)}
+.card-tag{font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--soft)}
+.card-head .card-tag{margin:0}
+.product-card h3{font-size:1.28rem;font-weight:700;letter-spacing:-.015em;margin-bottom:10px;color:var(--navy)}
+.product-card p{color:var(--soft);font-size:.95rem;line-height:1.65;margin-bottom:24px;flex-grow:1}
+.product-link{color:var(--a);text-decoration:none;font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:8px}
+.product-link:hover span:first-child{text-decoration:underline;text-underline-offset:4px}
+.product-link .arrow{transition:transform .25s}
+.product-card:hover .arrow{transform:translateX(5px)}
+[dir=rtl] .product-card:hover .arrow{transform:scaleX(-1) translateX(5px)}
 
-/* about */
-.about-section{background:var(--a);color:#fff;padding:84px 5%}
-.about-container{max-width:780px;margin:0 auto}
-.about-eyebrow{font-size:.9rem;font-weight:600;color:#cfe6f7;margin-bottom:14px}
-.about-container h2{font-size:clamp(1.7rem,3vw,2.1rem);font-weight:600;letter-spacing:-.01em;margin-bottom:18px}
-.about-container p{font-size:1.05rem;color:#eaf3fb}
+/* ===== principles ===== */
+.principles-section{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:96px 5%}
+.principles-inner{max-width:1120px;margin:0 auto}
+.principles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
+.principle{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px;box-shadow:var(--sh1);transition:box-shadow .3s,transform .3s}
+.principle:hover{box-shadow:var(--sh2);transform:translateY(-3px)}
+.p-icon{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--a),#2b8ad6);color:#fff;display:grid;place-items:center;margin-bottom:22px;box-shadow:0 8px 18px rgba(0,103,184,.28)}
+.principle h3{font-size:1.14rem;font-weight:700;letter-spacing:-.01em;margin-bottom:10px;color:var(--navy)}
+.principle p{color:var(--soft);font-size:.95rem;line-height:1.65}
 
-/* footer */
-footer{background:var(--surface);padding:52px 5% 24px;font-size:.85rem;color:var(--soft)}
-.footer-container{max-width:1100px;margin:0 auto 36px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px}
-.footer-col h4{color:var(--ink);margin-bottom:14px;font-size:.85rem;font-weight:600}
-.footer-col ul{list-style:none}.footer-col li{margin-bottom:10px}
-.footer-col a{text-decoration:none;color:var(--soft)}
-.footer-col a:hover{color:var(--a);text-decoration:underline}
-.footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:20px}
+/* ===== about ===== */
+.about-section{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:104px 5%}
+.about-section::before{content:"";position:absolute;z-index:-1;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(0,103,184,.5),transparent 70%);top:-220px;right:-140px;filter:blur(30px)}
+.about-section::after{content:"";position:absolute;z-index:-1;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.2px);background-size:28px 28px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 70%);mask-image:linear-gradient(90deg,transparent,#000 70%)}
+.about-container{max-width:800px;margin:0 auto}
+.about-eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7cc0f5;margin-bottom:16px}
+.about-container h2{font-size:clamp(1.9rem,3.4vw,2.5rem);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-bottom:22px}
+.about-container p{font-size:1.1rem;line-height:1.8;color:#c9d8ea}
 
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+/* ===== footer ===== */
+footer{background:#071326;padding:64px 5% 28px;font-size:.88rem;color:#8fa3bb}
+.footer-container{max-width:1120px;margin:0 auto 44px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px}
+.footer-col h4{color:#fff;margin-bottom:16px;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.footer-col ul{list-style:none}.footer-col li{margin-bottom:11px}
+.footer-col a{text-decoration:none;color:#8fa3bb;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.1);padding-top:24px;font-size:.82rem}
+
+/* ===== misc ===== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
+.to-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--ink);cursor:pointer;z-index:900;box-shadow:var(--sh2);opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .25s,transform .25s,background .2s,color .2s;display:grid;place-items:center}
+[dir=rtl] .to-top{right:auto;left:24px}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{background:var(--a);border-color:var(--a);color:#fff}
+.to-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px;border-radius:6px}
 
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.section-head{flex-direction:column;align-items:flex-start}.section-sub{text-align:start}.hero{padding-top:130px}}
-@media(max-width:640px){nav ul{display:none}.footer-bottom{flex-direction:column;gap:14px;align-items:flex-start}.slideshow-viewport{aspect-ratio:4/3}}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:44px}.section-head{flex-direction:column;align-items:flex-start}.section-sub{text-align:start}.hero{padding-top:140px}.products-section,.principles-section,.about-section{padding-top:72px;padding-bottom:72px}}
+@media(max-width:640px){nav ul{display:none}.menu-btn{display:inline-flex}.footer-bottom{flex-direction:column;gap:14px;align-items:flex-start}.slideshow-viewport{aspect-ratio:4/3;border-radius:18px}.hero{padding-bottom:64px}.hero-panel{padding:22px}.nav-container{padding-left:18px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-:focus-visible{outline:2px solid var(--a);outline-offset:3px}
 </style>
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
 <header id="top">
   <div class="nav-container">
     <a href="#" class="logo-area" aria-label="Wind Developers Home"><img src="logo.png" alt="Wind Developers Logo"><span>Wind Developers</span></a>
     <div class="nav-right">
       <nav aria-label="Main navigation"><ul>
         <li><a href="#products" id="nav-products">Products</a></li>
+        <li><a href="#principles" id="nav-principles">Principles</a></li>
         <li><a href="#about" id="nav-about">Corporate</a></li>
         <li><a href="https://developerswind.vercel.app/" target="_blank" rel="noopener" id="nav-studio">Developers Studio</a></li>
       </ul></nav>
@@ -152,7 +219,14 @@ footer{background:var(--surface);padding:52px 5% 24px;font-size:.85rem;color:var
         <button class="lang-btn" id="lang-btn" onclick="toggleLangMenu()" aria-haspopup="true" aria-expanded="false"><span id="lang-btn-label">EN</span></button>
         <div class="lang-menu" id="lang-menu"></div>
       </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#products" id="m-products">Products</a>
+    <a href="#principles" id="m-principles">Principles</a>
+    <a href="#about" id="m-about">Corporate</a>
+    <a href="https://developerswind.vercel.app/" target="_blank" rel="noopener" id="m-studio">Developers Studio</a>
   </div>
 </header>
 <main>
@@ -162,15 +236,15 @@ footer{background:var(--surface);padding:52px 5% 24px;font-size:.85rem;color:var
         <span class="eyebrow" id="hero-eyebrow">Software &amp; Cloud Ecosystem</span>
         <h1 id="hero-title">Simply Powerful.</h1>
         <p id="hero-desc">Wind Developers develops next-generation open-source projects, robust software, and intuitive digital tools to optimize your daily digital experience.</p>
-        <a href="#products" class="cta-btn" id="hero-cta"><span>Explore Ecosystem</span><span class="arrow">&rarr;</span></a>
+        <div class="hero-actions"><a href="#products" class="cta-btn" id="hero-cta"><span>Explore Ecosystem</span><span class="arrow">&rarr;</span></a><a href="#about" class="ghost-btn" id="hero-cta2">Corporate</a></div>
       </div>
       <div class="hero-panel reveal">
         <div class="hero-panel-label" id="panel-label">Ecosystem at a glance</div>
-        <div class="stat-row"><span class="name">WindexOS</span><span class="val">Linux</span></div>
-        <div class="stat-row"><span class="name">Webrix</span><span class="val">Browser</span></div>
-        <div class="stat-row"><span class="name">Matylo</span><span class="val">AI</span></div>
-        <div class="stat-row"><span class="name">WMail</span><span class="val">Mail</span></div>
-        <div class="stat-row"><span class="name">WindStore</span><span class="val">Apps</span></div>
+        <a class="stat-row" href="https://windexos.vercel.app/" target="_blank" rel="noopener"><span class="name">WindexOS</span><span class="val">Linux &rarr;</span></a>
+        <a class="stat-row" href="https://webrixexp.vercel.app/" target="_blank" rel="noopener"><span class="name">Webrix</span><span class="val">Browser &rarr;</span></a>
+        <a class="stat-row" href="https://matylo.vercel.app/" target="_blank" rel="noopener"><span class="name">Matylo</span><span class="val">AI &rarr;</span></a>
+        <a class="stat-row" href="https://wmswmail.vercel.app/" target="_blank" rel="noopener"><span class="name">WMail</span><span class="val">Mail &rarr;</span></a>
+        <a class="stat-row" href="https://windstore.base44.app/" target="_blank" rel="noopener"><span class="name">WindStore</span><span class="val">Apps &rarr;</span></a>
       </div>
     </div>
   </section>
@@ -194,13 +268,26 @@ footer{background:var(--surface);padding:52px 5% 24px;font-size:.85rem;color:var
       <p class="section-sub" id="section-products-sub">Everything we build, from the operating system up.</p>
     </div>
     <div class="products-grid">
-      <article class="product-card reveal"><div><div class="card-tag">01 / OS</div><h3 id="p1-title">WindexOS</h3><p id="p1-desc">A speed and performance-focused modern Linux distribution equipped with custom system utilities, an optimized kernel structure, and native built-in CLI solutions.</p></div><a href="https://windexos.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p1-link"><span>Explore WindexOS</span><span class="arrow">&rarr;</span></a></article>
-      <article class="product-card reveal"><div><div class="card-tag">02 / BROWSER</div><h3 id="p2-title">Webrix Browser</h3><p id="p2-desc">A next-generation browser redefining the web experience with custom URL commands, advanced tab hierarchy, and an ultra-lightweight engine architecture.</p></div><a href="https://webrixexp.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p2-link"><span>Join Webrix</span><span class="arrow">&rarr;</span></a></article>
-      <article class="product-card reveal"><div><div class="card-tag">03 / AI</div><h3 id="p3-title">Matylo</h3><p id="p3-desc">An intelligent assistant that smartly manages your digital workspaces and communities using advanced AI integrations and automation features.</p></div><a href="https://matylo.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p3-link"><span>Discover Matylo</span><span class="arrow">&rarr;</span></a></article>
-      <article class="product-card reveal"><div><div class="card-tag">04 / MAIL</div><h3 id="p4-title">WMail</h3><p id="p4-desc">A clean, fast, and secure mail client built for the Wind Developers ecosystem, designed to keep your communication simple and private.</p></div><a href="https://wmswmail.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p4-link"><span>Open WMail</span><span class="arrow">&rarr;</span></a></article>
-      <article class="product-card reveal"><div><div class="card-tag">05 / STORE</div><h3 id="p5-title">WindStore</h3><p id="p5-desc">A modern application marketplace where you can securely access the most powerful and optimized apps within the Wind Developers ecosystem.</p></div><a href="https://windstore.base44.app/" class="product-link" target="_blank" rel="noopener" id="p5-link"><span>Visit WindStore</span><span class="arrow">&rarr;</span></a></article>
-      <article class="product-card reveal"><div><div class="card-tag">06 / LEARN</div><h3 id="p6-title">Wind Education</h3><p id="p6-desc">Free learning resources, guides, and courses that help developers and everyday users get the most out of the Wind Developers ecosystem.</p></div><a href="https://education.winddevelopers.cc.cd/" class="product-link" target="_blank" rel="noopener" id="p6-link"><span>Start Learning</span><span class="arrow">&rarr;</span></a></article>
-      <article class="product-card reveal"><div><div class="card-tag">07 / STUDIO</div><h3 id="p7-title">Developers Studio</h3><p id="p7-desc">An innovative, inclusive, and centralized developer hub designed to accelerate coding workflows and streamline deployment for creators.</p></div><a href="https://developerswind.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p7-link"><span>Launch Studio</span><span class="arrow">&rarr;</span></a></article>
+      <article class="product-card reveal"><div><div class="card-head"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 9l3 2-3 2M12 14h4"/></svg></span><div class="card-tag">01 / OS</div></div><h3 id="p1-title">WindexOS</h3><p id="p1-desc">A speed and performance-focused modern Linux distribution equipped with custom system utilities, an optimized kernel structure, and native built-in CLI solutions.</p></div><a href="https://windexos.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p1-link"><span>Explore WindexOS</span><span class="arrow">&rarr;</span></a></article>
+      <article class="product-card reveal"><div><div class="card-head"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><div class="card-tag">02 / BROWSER</div></div><h3 id="p2-title">Webrix Browser</h3><p id="p2-desc">A next-generation browser redefining the web experience with custom URL commands, advanced tab hierarchy, and an ultra-lightweight engine architecture.</p></div><a href="https://webrixexp.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p2-link"><span>Join Webrix</span><span class="arrow">&rarr;</span></a></article>
+      <article class="product-card reveal"><div><div class="card-head"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span><div class="card-tag">03 / AI</div></div><h3 id="p3-title">Matylo</h3><p id="p3-desc">An intelligent assistant that smartly manages your digital workspaces and communities using advanced AI integrations and automation features.</p></div><a href="https://matylo.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p3-link"><span>Discover Matylo</span><span class="arrow">&rarr;</span></a></article>
+      <article class="product-card reveal"><div><div class="card-head"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div class="card-tag">04 / MAIL</div></div><h3 id="p4-title">WMail</h3><p id="p4-desc">A clean, fast, and secure mail client built for the Wind Developers ecosystem, designed to keep your communication simple and private.</p></div><a href="https://wmswmail.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p4-link"><span>Open WMail</span><span class="arrow">&rarr;</span></a></article>
+      <article class="product-card reveal"><div><div class="card-head"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8a3 3 0 016 0"/></svg></span><div class="card-tag">05 / STORE</div></div><h3 id="p5-title">WindStore</h3><p id="p5-desc">A modern application marketplace where you can securely access the most powerful and optimized apps within the Wind Developers ecosystem.</p></div><a href="https://windstore.base44.app/" class="product-link" target="_blank" rel="noopener" id="p5-link"><span>Visit WindStore</span><span class="arrow">&rarr;</span></a></article>
+      <article class="product-card reveal"><div><div class="card-head"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c3 2 9 2 12 0v-4.5"/></svg></span><div class="card-tag">06 / LEARN</div></div><h3 id="p6-title">Wind Education</h3><p id="p6-desc">Free learning resources, guides, and courses that help developers and everyday users get the most out of the Wind Developers ecosystem.</p></div><a href="https://education.winddevelopers.cc.cd/" class="product-link" target="_blank" rel="noopener" id="p6-link"><span>Start Learning</span><span class="arrow">&rarr;</span></a></article>
+      <article class="product-card reveal"><div><div class="card-head"><span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg></span><div class="card-tag">07 / STUDIO</div></div><h3 id="p7-title">Developers Studio</h3><p id="p7-desc">An innovative, inclusive, and centralized developer hub designed to accelerate coding workflows and streamline deployment for creators.</p></div><a href="https://developerswind.vercel.app/" class="product-link" target="_blank" rel="noopener" id="p7-link"><span>Launch Studio</span><span class="arrow">&rarr;</span></a></article>
+    </div>
+  </section>
+  <section id="principles" class="principles-section" aria-label="Principles">
+    <div class="principles-inner">
+      <div class="section-head reveal">
+        <h2 class="section-title" id="why-title">Built on three principles</h2>
+        <p class="section-sub" id="why-sub">What guides every product we ship.</p>
+      </div>
+      <div class="principles-grid">
+        <div class="principle reveal"><div class="p-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4"/></svg></div><h3 id="w1-title">Open by default</h3><p id="w1-desc">Our projects are developed in the open, so anyone can read, learn from and contribute to the code.</p></div>
+        <div class="principle reveal"><div class="p-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3 id="w2-title">Performance first</h3><p id="w2-desc">Lightweight engines and optimized system layers keep everything fast, even on modest hardware.</p></div>
+        <div class="principle reveal"><div class="p-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3 id="w3-title">Private by design</h3><p id="w3-desc">Security and privacy are part of the foundation, not an afterthought added at the end.</p></div>
+      </div>
     </div>
   </section>
   <section id="about" class="about-section reveal" aria-label="About">
@@ -219,9 +306,10 @@ footer{background:var(--surface);padding:52px 5% 24px;font-size:.85rem;color:var
   </div>
   <div class="footer-bottom"><span id="footer-copy">&copy; 2026 Wind Developers. All rights reserved.</span><span>Simply Powerful.</span></div>
 </footer>
+<button class="to-top" id="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <script>
 const translations = {
-en:{dir:"ltr",name:"English",pageTitle:"Wind Developers | Software & Cloud Solutions",metaDesc:"Wind Developers builds next-generation software: WindexOS Linux distro, Webrix Browser, Matylo AI assistant, WMail, WindStore and Wind Education.",navProducts:"Products",navAbout:"Corporate",navStudio:"Developers Studio",heroEyebrow:"Software & Cloud Ecosystem",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers develops next-generation open-source projects, robust software, and intuitive digital tools to optimize your daily digital experience.",heroCta:"Explore Ecosystem",panelLabel:"Ecosystem at a glance",sectionProductsTitle:"Innovative Technology Solutions",sectionProductsSub:"Everything we build, from the operating system up.",
+en:{navPrinciples:"Principles",whyTitle:"Built on three principles",whySub:"What guides every product we ship.",w1Title:"Open by default",w1Desc:"Our projects are developed in the open, so anyone can read, learn from and contribute to the code.",w2Title:"Performance first",w2Desc:"Lightweight engines and optimized system layers keep everything fast, even on modest hardware.",w3Title:"Private by design",w3Desc:"Security and privacy are part of the foundation, not an afterthought added at the end.",dir:"ltr",name:"English",pageTitle:"Wind Developers | Software & Cloud Solutions",metaDesc:"Wind Developers builds next-generation software: WindexOS Linux distro, Webrix Browser, Matylo AI assistant, WMail, WindStore and Wind Education.",navProducts:"Products",navAbout:"Corporate",navStudio:"Developers Studio",heroEyebrow:"Software & Cloud Ecosystem",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers develops next-generation open-source projects, robust software, and intuitive digital tools to optimize your daily digital experience.",heroCta:"Explore Ecosystem",panelLabel:"Ecosystem at a glance",sectionProductsTitle:"Innovative Technology Solutions",sectionProductsSub:"Everything we build, from the operating system up.",
 p1Title:"WindexOS",p1Desc:"A speed and performance-focused modern Linux distribution equipped with custom system utilities, an optimized kernel structure, and native built-in CLI solutions.",p1Link:"Explore WindexOS",
 p2Title:"Webrix Browser",p2Desc:"A next-generation browser redefining the web experience with custom URL commands, advanced tab hierarchy, and an ultra-lightweight engine architecture.",p2Link:"Join Webrix",
 p3Title:"Matylo",p3Desc:"An intelligent assistant that smartly manages your digital workspaces and communities using advanced AI integrations and automation features.",p3Link:"Discover Matylo",
@@ -230,7 +318,7 @@ p5Title:"WindStore",p5Desc:"A modern application marketplace where you can secur
 p6Title:"Wind Education",p6Desc:"Free learning resources, guides, and courses that help developers and everyday users get the most out of the Wind Developers ecosystem.",p6Link:"Start Learning",
 p7Title:"Developers Studio",p7Desc:"An innovative, inclusive, and centralized developer hub designed to accelerate coding workflows and streamline deployment for creators.",p7Link:"Launch Studio",
 aboutEyebrow:"Corporate",aboutTitle:"About Wind Developers",aboutDesc:"We turn ideas into pure performance. With our full-stack programming models, custom operating system architecture research, and cutting-edge artificial intelligence integrations, we represent a global software vision dedicated to raising technology standards.",fCol1:"Ecosystem",fCol2:"Developer",fCol3:"Corporate",fLinkAbout:"About Us",fLinkEducation:"Wind Education",fLinkContact:"Contact",footerCopy:"© 2026 Wind Developers. All rights reserved."},
-tr:{dir:"ltr",name:"Türkçe",pageTitle:"Wind Developers | Simply Powerful",metaDesc:"Wind Developers; WindexOS, Webrix Browser, Matylo, WMail ve Wind Education ile geleceğin teknolojisini ve yazılım ekosistemini inşa ediyor.",navProducts:"Ürünlerimiz",navAbout:"Kurumsal",navStudio:"Developers Studio",heroEyebrow:"Yazılım ve Bulut Ekosistemi",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers, yeni nesil açık kaynak projeler ve günlük dijital deneyiminizi optimize eden yazılım araçları geliştirir.",heroCta:"Ekosistemi Keşfedin",panelLabel:"Ekosisteme genel bakış",sectionProductsTitle:"Yenilikçi Teknoloji Çözümlerimiz",sectionProductsSub:"İşletim sisteminden başlayarak geliştirdiğimiz her şey.",
+tr:{navPrinciples:"İlkelerimiz",whyTitle:"Üç ilke üzerine kurulu",whySub:"Sunduğumuz her ürüne yön veren değerler.",w1Title:"Varsayılan olarak açık",w1Desc:"Projelerimiz açık geliştirilir; herkes kodu okuyabilir, ondan öğrenebilir ve katkıda bulunabilir.",w2Title:"Önce performans",w2Desc:"Hafif motorlar ve optimize edilmiş sistem katmanları, mütevazı donanımlarda bile her şeyi hızlı tutar.",w3Title:"Tasarımdan gelen gizlilik",w3Desc:"Güvenlik ve gizlilik, sonradan eklenen bir detay değil, temelin parçasıdır.",dir:"ltr",name:"Türkçe",pageTitle:"Wind Developers | Simply Powerful",metaDesc:"Wind Developers; WindexOS, Webrix Browser, Matylo, WMail ve Wind Education ile geleceğin teknolojisini ve yazılım ekosistemini inşa ediyor.",navProducts:"Ürünlerimiz",navAbout:"Kurumsal",navStudio:"Developers Studio",heroEyebrow:"Yazılım ve Bulut Ekosistemi",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers, yeni nesil açık kaynak projeler ve günlük dijital deneyiminizi optimize eden yazılım araçları geliştirir.",heroCta:"Ekosistemi Keşfedin",panelLabel:"Ekosisteme genel bakış",sectionProductsTitle:"Yenilikçi Teknoloji Çözümlerimiz",sectionProductsSub:"İşletim sisteminden başlayarak geliştirdiğimiz her şey.",
 p1Title:"WindexOS",p1Desc:"Özelleştirilmiş sistem araçları, optimize edilmiş çekirdek yapısı ve yerleşik özgün CLI çözümleriyle donatılmış, hız ve performans odaklı modern Linux dağıtımı.",p1Link:"WindexOS'u İncele",
 p2Title:"Webrix Browser",p2Desc:"Özel URL komutları, gelişmiş sekme hiyerarşisi ve ultra hafif motor mimarisiyle web deneyimini yeniden tanımlayan yeni nesil tarayıcı.",p2Link:"Webrix'e Katıl",
 p3Title:"Matylo",p3Desc:"Yapay zeka entegrasyonları ve gelişmiş otomasyon yetenekleri ile dijital çalışma alanlarınızı ve topluluklarınızı akıllıca yöneten asistan.",p3Link:"Matylo'yu Keşfet",
@@ -239,7 +327,7 @@ p5Title:"WindStore",p5Desc:"Wind Developers ekosistemindeki en güçlü ve optim
 p6Title:"Wind Education",p6Desc:"Geliştiricilerin ve kullanıcıların Wind Developers ekosisteminden en iyi şekilde faydalanmasını sağlayan ücretsiz eğitim içerikleri ve rehberler.",p6Link:"Öğrenmeye Başla",
 p7Title:"Developers Studio",p7Desc:"Geliştiriciler için kodlama süreçlerini hızlandıran, entegrasyonu kolaylaştıran yenilikçi ve kapsayıcı merkezi geliştirici platformu.",p7Link:"Stüdyoya Giriş Yap",
 aboutEyebrow:"Kurumsal",aboutTitle:"Wind Developers Hakkında",aboutDesc:"Fikirleri performansa dönüştürüyoruz. Tam yığın programlama modellerimiz, işletim sistemi mimarisi çalışmalarımız ve yenilikçi yapay zeka entegrasyonlarımızla, teknoloji standartlarını yükseltmeyi hedefleyen global bir yazılım vizyonuyuz.",fCol1:"Ekosistem",fCol2:"Geliştirici",fCol3:"Kurumsal",fLinkAbout:"Hakkımızda",fLinkEducation:"Wind Education",fLinkContact:"İletişim",footerCopy:"© 2026 Wind Developers. Tüm hakları saklıdır."},
-de:{dir:"ltr",name:"Deutsch",pageTitle:"Wind Developers | Software & Cloud-Lösungen",metaDesc:"Wind Developers entwickelt Software der nächsten Generation: WindexOS Linux-Distribution, Webrix Browser, Matylo KI-Assistent, WMail, WindStore und Wind Education.",navProducts:"Produkte",navAbout:"Unternehmen",navStudio:"Developers Studio",heroEyebrow:"Software- und Cloud-Ökosystem",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers entwickelt Open-Source-Projekte der nächsten Generation, robuste Software und intuitive digitale Werkzeuge für Ihren digitalen Alltag.",heroCta:"Ökosystem entdecken",panelLabel:"Ökosystem im Überblick",sectionProductsTitle:"Innovative Technologielösungen",sectionProductsSub:"Alles, was wir bauen, vom Betriebssystem an aufwärts.",
+de:{navPrinciples:"Prinzipien",whyTitle:"Auf drei Prinzipien gebaut",whySub:"Was jedes unserer Produkte leitet.",w1Title:"Standardmäßig offen",w1Desc:"Unsere Projekte entstehen offen – jeder kann den Code lesen, daraus lernen und mitwirken.",w2Title:"Leistung zuerst",w2Desc:"Schlanke Engines und optimierte Systemschichten halten alles schnell, auch auf bescheidener Hardware.",w3Title:"Privatsphäre by Design",w3Desc:"Sicherheit und Datenschutz sind Teil des Fundaments, kein nachträglicher Zusatz.",dir:"ltr",name:"Deutsch",pageTitle:"Wind Developers | Software & Cloud-Lösungen",metaDesc:"Wind Developers entwickelt Software der nächsten Generation: WindexOS Linux-Distribution, Webrix Browser, Matylo KI-Assistent, WMail, WindStore und Wind Education.",navProducts:"Produkte",navAbout:"Unternehmen",navStudio:"Developers Studio",heroEyebrow:"Software- und Cloud-Ökosystem",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers entwickelt Open-Source-Projekte der nächsten Generation, robuste Software und intuitive digitale Werkzeuge für Ihren digitalen Alltag.",heroCta:"Ökosystem entdecken",panelLabel:"Ökosystem im Überblick",sectionProductsTitle:"Innovative Technologielösungen",sectionProductsSub:"Alles, was wir bauen, vom Betriebssystem an aufwärts.",
 p1Title:"WindexOS",p1Desc:"Eine auf Geschwindigkeit und Leistung ausgerichtete moderne Linux-Distribution mit eigenen Systemwerkzeugen, optimierter Kernelstruktur und nativen CLI-Lösungen.",p1Link:"WindexOS entdecken",
 p2Title:"Webrix Browser",p2Desc:"Ein Browser der nächsten Generation, der das Weberlebnis mit eigenen URL-Befehlen, erweiterter Tab-Hierarchie und einer ultraleichten Engine-Architektur neu definiert.",p2Link:"Webrix beitreten",
 p3Title:"Matylo",p3Desc:"Ein intelligenter Assistent, der Ihre digitalen Arbeitsbereiche und Communities mit fortschrittlichen KI-Integrationen und Automatisierung smart verwaltet.",p3Link:"Matylo entdecken",
@@ -248,7 +336,7 @@ p5Title:"WindStore",p5Desc:"Ein moderner App-Marktplatz, über den Sie sicher au
 p6Title:"Wind Education",p6Desc:"Kostenlose Lernressourcen, Anleitungen und Kurse, die Entwicklern und Nutzern helfen, das Beste aus dem Wind-Developers-Ökosystem herauszuholen.",p6Link:"Jetzt lernen",
 p7Title:"Developers Studio",p7Desc:"Ein innovativer, zentraler Entwickler-Hub, der Coding-Workflows beschleunigt und das Deployment für Kreative vereinfacht.",p7Link:"Studio starten",
 aboutEyebrow:"Unternehmen",aboutTitle:"Über Wind Developers",aboutDesc:"Wir verwandeln Ideen in reine Leistung. Mit Full-Stack-Programmiermodellen, eigener Forschung zu Betriebssystemarchitekturen und modernsten KI-Integrationen verfolgen wir eine globale Softwarevision, die den Technologiestandard anhebt.",fCol1:"Ökosystem",fCol2:"Entwickler",fCol3:"Unternehmen",fLinkAbout:"Über uns",fLinkEducation:"Wind Education",fLinkContact:"Kontakt",footerCopy:"© 2026 Wind Developers. Alle Rechte vorbehalten."},
-ar:{dir:"rtl",name:"العربية",pageTitle:"Wind Developers | حلول البرمجيات والسحابة",metaDesc:"تطوّر Wind Developers برمجيات الجيل القادم: نظام WindexOS، متصفح Webrix، مساعد Matylo الذكي، WMail، WindStore، وWind Education.",navProducts:"المنتجات",navAbout:"عن الشركة",navStudio:"Developers Studio",heroEyebrow:"منظومة برمجيات وسحابة",heroTitle:"Simply Powerful.",heroDesc:"تطوّر Wind Developers مشاريع مفتوحة المصدر من الجيل القادم، وبرمجيات قوية، وأدوات رقمية بديهية لتحسين تجربتك الرقمية اليومية.",heroCta:"استكشف المنظومة",panelLabel:"نظرة عامة على المنظومة",sectionProductsTitle:"حلول تقنية مبتكرة",sectionProductsSub:"كل ما نبنيه، بدءًا من نظام التشغيل.",
+ar:{navPrinciples:"المبادئ",whyTitle:"مبنيّ على ثلاثة مبادئ",whySub:"ما يوجّه كل منتج نقدّمه.",w1Title:"مفتوح افتراضيًا",w1Desc:"نطوّر مشاريعنا بشكل مفتوح، ليتمكن الجميع من قراءة الشيفرة والتعلّم منها والمساهمة فيها.",w2Title:"الأداء أولًا",w2Desc:"محركات خفيفة وطبقات نظام محسّنة تُبقي كل شيء سريعًا حتى على الأجهزة المتواضعة.",w3Title:"خصوصية بالتصميم",w3Desc:"الأمان والخصوصية جزء من الأساس، وليسا إضافة متأخرة.",dir:"rtl",name:"العربية",pageTitle:"Wind Developers | حلول البرمجيات والسحابة",metaDesc:"تطوّر Wind Developers برمجيات الجيل القادم: نظام WindexOS، متصفح Webrix، مساعد Matylo الذكي، WMail، WindStore، وWind Education.",navProducts:"المنتجات",navAbout:"عن الشركة",navStudio:"Developers Studio",heroEyebrow:"منظومة برمجيات وسحابة",heroTitle:"Simply Powerful.",heroDesc:"تطوّر Wind Developers مشاريع مفتوحة المصدر من الجيل القادم، وبرمجيات قوية، وأدوات رقمية بديهية لتحسين تجربتك الرقمية اليومية.",heroCta:"استكشف المنظومة",panelLabel:"نظرة عامة على المنظومة",sectionProductsTitle:"حلول تقنية مبتكرة",sectionProductsSub:"كل ما نبنيه، بدءًا من نظام التشغيل.",
 p1Title:"WindexOS",p1Desc:"توزيعة لينكس حديثة تركز على السرعة والأداء، مزودة بأدوات نظام مخصصة وبنية نواة محسّنة وحلول سطر أوامر أصلية.",p1Link:"استكشف WindexOS",
 p2Title:"Webrix Browser",p2Desc:"متصفح من الجيل القادم يعيد تعريف تجربة الويب بأوامر URL مخصصة وتسلسل هرمي متقدم للتبويبات ومحرك خفيف للغاية.",p2Link:"انضم إلى Webrix",
 p3Title:"Matylo",p3Desc:"مساعد ذكي يدير مساحات العمل والمجتمعات الرقمية بذكاء باستخدام تكاملات الذكاء الاصطناعي المتقدمة وميزات الأتمتة.",p3Link:"اكتشف Matylo",
@@ -257,7 +345,7 @@ p5Title:"WindStore",p5Desc:"متجر تطبيقات حديث يتيح لك ال�
 p6Title:"Wind Education",p6Desc:"موارد تعليمية مجانية وأدلة ودورات تساعد المطورين والمستخدمين على الاستفادة القصوى من منظومة Wind Developers.",p6Link:"ابدأ التعلم",
 p7Title:"Developers Studio",p7Desc:"مركز مطورين مبتكر وشامل ومركزي مصمم لتسريع عمليات البرمجة وتبسيط النشر للمبدعين.",p7Link:"إطلاق الاستوديو",
 aboutEyebrow:"عن الشركة",aboutTitle:"عن Wind Developers",aboutDesc:"نحوّل الأفكار إلى أداء خالص. من خلال نماذجنا البرمجية المتكاملة وأبحاثنا في بنية أنظمة التشغيل وتكاملات الذكاء الاصطناعي المتطورة، نمثل رؤية برمجية عالمية مكرّسة لرفع معايير التقنية.",fCol1:"المنظومة",fCol2:"المطورون",fCol3:"عن الشركة",fLinkAbout:"من نحن",fLinkEducation:"Wind Education",fLinkContact:"تواصل معنا",footerCopy:"© 2026 Wind Developers. جميع الحقوق محفوظة."},
-es:{dir:"ltr",name:"Español",pageTitle:"Wind Developers | Software y soluciones en la nube",metaDesc:"Wind Developers crea software de próxima generación: la distribución Linux WindexOS, el navegador Webrix, el asistente de IA Matylo, WMail, WindStore y Wind Education.",navProducts:"Productos",navAbout:"Corporativo",navStudio:"Developers Studio",heroEyebrow:"Ecosistema de software y nube",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers desarrolla proyectos de código abierto de próxima generación, software robusto y herramientas digitales intuitivas para optimizar tu experiencia digital diaria.",heroCta:"Explorar el ecosistema",panelLabel:"El ecosistema de un vistazo",sectionProductsTitle:"Soluciones tecnológicas innovadoras",sectionProductsSub:"Todo lo que construimos, desde el sistema operativo hacia arriba.",
+es:{navPrinciples:"Principios",whyTitle:"Construido sobre tres principios",whySub:"Lo que guía cada producto que lanzamos.",w1Title:"Abierto por defecto",w1Desc:"Desarrollamos nuestros proyectos en abierto para que cualquiera pueda leer el código, aprender de él y contribuir.",w2Title:"El rendimiento primero",w2Desc:"Motores ligeros y capas de sistema optimizadas mantienen todo rápido, incluso en hardware modesto.",w3Title:"Privado por diseño",w3Desc:"La seguridad y la privacidad forman parte de los cimientos, no un añadido de última hora.",dir:"ltr",name:"Español",pageTitle:"Wind Developers | Software y soluciones en la nube",metaDesc:"Wind Developers crea software de próxima generación: la distribución Linux WindexOS, el navegador Webrix, el asistente de IA Matylo, WMail, WindStore y Wind Education.",navProducts:"Productos",navAbout:"Corporativo",navStudio:"Developers Studio",heroEyebrow:"Ecosistema de software y nube",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers desarrolla proyectos de código abierto de próxima generación, software robusto y herramientas digitales intuitivas para optimizar tu experiencia digital diaria.",heroCta:"Explorar el ecosistema",panelLabel:"El ecosistema de un vistazo",sectionProductsTitle:"Soluciones tecnológicas innovadoras",sectionProductsSub:"Todo lo que construimos, desde el sistema operativo hacia arriba.",
 p1Title:"WindexOS",p1Desc:"Una distribución Linux moderna centrada en la velocidad y el rendimiento, equipada con utilidades de sistema personalizadas, un kernel optimizado y soluciones CLI nativas.",p1Link:"Explorar WindexOS",
 p2Title:"Webrix Browser",p2Desc:"Un navegador de próxima generación que redefine la experiencia web con comandos de URL personalizados, jerarquía avanzada de pestañas y un motor ultraligero.",p2Link:"Unirse a Webrix",
 p3Title:"Matylo",p3Desc:"Un asistente inteligente que gestiona con inteligencia tus espacios de trabajo y comunidades digitales usando integraciones avanzadas de IA y automatización.",p3Link:"Descubrir Matylo",
@@ -266,7 +354,7 @@ p5Title:"WindStore",p5Desc:"Un mercado de aplicaciones moderno donde puedes acce
 p6Title:"Wind Education",p6Desc:"Recursos de aprendizaje, guías y cursos gratuitos que ayudan a desarrolladores y usuarios a aprovechar al máximo el ecosistema Wind Developers.",p6Link:"Empezar a aprender",
 p7Title:"Developers Studio",p7Desc:"Un centro de desarrolladores innovador, inclusivo y centralizado diseñado para acelerar los flujos de trabajo de código y simplificar el despliegue.",p7Link:"Lanzar Studio",
 aboutEyebrow:"Corporativo",aboutTitle:"Sobre Wind Developers",aboutDesc:"Convertimos ideas en pura eficacia. Con nuestros modelos de programación full-stack, investigación en arquitectura de sistemas operativos e integraciones de inteligencia artificial de vanguardia, representamos una visión de software global dedicada a elevar los estándares tecnológicos.",fCol1:"Ecosistema",fCol2:"Desarrollador",fCol3:"Corporativo",fLinkAbout:"Sobre nosotros",fLinkEducation:"Wind Education",fLinkContact:"Contacto",footerCopy:"© 2026 Wind Developers. Todos los derechos reservados."},
-fr:{dir:"ltr",name:"Français",pageTitle:"Wind Developers | Logiciels et solutions cloud",metaDesc:"Wind Developers conçoit des logiciels de nouvelle génération : la distribution Linux WindexOS, le navigateur Webrix, l'assistant IA Matylo, WMail, WindStore et Wind Education.",navProducts:"Produits",navAbout:"Entreprise",navStudio:"Developers Studio",heroEyebrow:"Écosystème logiciel et cloud",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers développe des projets open source de nouvelle génération, des logiciels robustes et des outils numériques intuitifs pour optimiser votre expérience numérique quotidienne.",heroCta:"Explorer l'écosystème",panelLabel:"L'écosystème en un coup d'œil",sectionProductsTitle:"Solutions technologiques innovantes",sectionProductsSub:"Tout ce que nous construisons, du système d'exploitation jusqu'au bout.",
+fr:{navPrinciples:"Principes",whyTitle:"Bâti sur trois principes",whySub:"Ce qui guide chacun de nos produits.",w1Title:"Ouvert par défaut",w1Desc:"Nos projets sont développés en open source : chacun peut lire le code, s'en inspirer et y contribuer.",w2Title:"La performance d'abord",w2Desc:"Des moteurs légers et des couches système optimisées gardent tout rapide, même sur du matériel modeste.",w3Title:"Confidentialité dès la conception",w3Desc:"La sécurité et la vie privée font partie des fondations, pas d'un ajout de dernière minute.",dir:"ltr",name:"Français",pageTitle:"Wind Developers | Logiciels et solutions cloud",metaDesc:"Wind Developers conçoit des logiciels de nouvelle génération : la distribution Linux WindexOS, le navigateur Webrix, l'assistant IA Matylo, WMail, WindStore et Wind Education.",navProducts:"Produits",navAbout:"Entreprise",navStudio:"Developers Studio",heroEyebrow:"Écosystème logiciel et cloud",heroTitle:"Simply Powerful.",heroDesc:"Wind Developers développe des projets open source de nouvelle génération, des logiciels robustes et des outils numériques intuitifs pour optimiser votre expérience numérique quotidienne.",heroCta:"Explorer l'écosystème",panelLabel:"L'écosystème en un coup d'œil",sectionProductsTitle:"Solutions technologiques innovantes",sectionProductsSub:"Tout ce que nous construisons, du système d'exploitation jusqu'au bout.",
 p1Title:"WindexOS",p1Desc:"Une distribution Linux moderne axée sur la vitesse et la performance, dotée d'utilitaires système personnalisés, d'un noyau optimisé et de solutions CLI natives.",p1Link:"Découvrir WindexOS",
 p2Title:"Webrix Browser",p2Desc:"Un navigateur de nouvelle génération qui redéfinit l'expérience web avec des commandes URL personnalisées, une hiérarchie d'onglets avancée et un moteur ultra-léger.",p2Link:"Rejoindre Webrix",
 p3Title:"Matylo",p3Desc:"Un assistant intelligent qui gère intelligemment vos espaces de travail et communautés numériques grâce à des intégrations IA avancées et à l'automatisation.",p3Link:"Découvrir Matylo",
@@ -285,7 +373,7 @@ function applyTranslations(lang){
   document.querySelector('meta[name="description"]').setAttribute('content',t.metaDesc);
   document.querySelector('meta[property="og:title"]').setAttribute('content',t.pageTitle);
   document.querySelector('meta[property="og:description"]').setAttribute('content',t.metaDesc);
-  const map={'nav-products':'navProducts','nav-about':'navAbout','nav-studio':'navStudio','hero-eyebrow':'heroEyebrow','hero-title':'heroTitle','hero-desc':'heroDesc','panel-label':'panelLabel','section-products-title':'sectionProductsTitle','section-products-sub':'sectionProductsSub','about-eyebrow':'aboutEyebrow','about-title':'aboutTitle','about-desc':'aboutDesc','f-col1':'fCol1','f-col2':'fCol2','f-col3':'fCol3','f-link-about':'fLinkAbout','f-link-education':'fLinkEducation','f-link-contact':'fLinkContact','footer-copy':'footerCopy'};
+  const map={'nav-products':'navProducts','nav-about':'navAbout','nav-principles':'navPrinciples','m-products':'navProducts','m-principles':'navPrinciples','m-about':'navAbout','m-studio':'navStudio','hero-cta2':'navAbout','why-title':'whyTitle','why-sub':'whySub','w1-title':'w1Title','w1-desc':'w1Desc','w2-title':'w2Title','w2-desc':'w2Desc','w3-title':'w3Title','w3-desc':'w3Desc','nav-studio':'navStudio','hero-eyebrow':'heroEyebrow','hero-title':'heroTitle','hero-desc':'heroDesc','panel-label':'panelLabel','section-products-title':'sectionProductsTitle','section-products-sub':'sectionProductsSub','about-eyebrow':'aboutEyebrow','about-title':'aboutTitle','about-desc':'aboutDesc','f-col1':'fCol1','f-col2':'fCol2','f-col3':'fCol3','f-link-about':'fLinkAbout','f-link-education':'fLinkEducation','f-link-contact':'fLinkContact','footer-copy':'footerCopy'};
   for(const id in map)$(id).innerText=t[map[id]];
   document.querySelector('#hero-cta span:first-child').innerText=t.heroCta;
   for(let n=1;n<=7;n++){
@@ -294,6 +382,7 @@ function applyTranslations(lang){
     document.querySelector('#p'+n+'-link span:first-child').innerText=t['p'+n+'Link'];
   }
   $('lang-btn-label').innerText=lang.toUpperCase();
+  try{localStorage.setItem('wd-lang',lang)}catch(e){}
   closeLangMenu();
 }
 function buildLangMenu(){
@@ -310,10 +399,38 @@ document.addEventListener('click',e=>{if(!e.target.closest('.lang-switcher'))clo
 buildLangMenu();
 const urlLang=new URLSearchParams(location.search).get('lang');
 if(urlLang&&translations[urlLang])applyTranslations(urlLang);
-else{const bl=(navigator.language||'en').slice(0,2);applyTranslations(translations[bl]?bl:'en')}
+else{let saved=null;try{saved=localStorage.getItem('wd-lang')}catch(e){}const bl=(navigator.language||'en').slice(0,2);applyTranslations(translations[saved]?saved:(translations[bl]?bl:'en'))}
 
 /* header shrinks slightly on scroll */
-addEventListener('scroll',()=>$('top').classList.toggle('scrolled',scrollY>30),{passive:true});
+const progressEl=$('progress'),toTop=$('to-top');
+function onScroll(){
+  $('top').classList.toggle('scrolled',scrollY>30);
+  const max=document.documentElement.scrollHeight-innerHeight;
+  progressEl.style.transform='scaleX('+(max>0?Math.min(scrollY/max,1):0)+')';
+  toTop.classList.toggle('show',scrollY>600);
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+/* mobile menu */
+const menuBtn=$('menu-btn'),mMenu=$('mobile-menu');
+function setMenu(o){mMenu.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',o)}
+menuBtn.onclick=e=>{e.stopPropagation();setMenu(!mMenu.classList.contains('open'))};
+mMenu.addEventListener('click',()=>setMenu(false));
+document.addEventListener('click',e=>{if(!e.target.closest('#mobile-menu'))setMenu(false)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){setMenu(false);closeLangMenu()}});
+
+/* active nav link */
+const navMap={products:$('nav-products'),principles:$('nav-principles'),about:$('nav-about')};
+const spy=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){Object.values(navMap).forEach(a=>a.classList.remove('active'));navMap[e.target.id].classList.add('active')}
+}),{rootMargin:'-45% 0px -50% 0px'});
+Object.keys(navMap).forEach(id=>spy.observe($(id)));
+
+/* card spotlight */
+document.querySelectorAll('.product-card').forEach(c=>c.addEventListener('pointermove',e=>{
+  const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+}));
 
 /* scroll reveal */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
@@ -359,6 +476,14 @@ function goToSlide(i){showSlide(i);restartAutoplay()}
 function startAutoplay(){slideTimer=setInterval(()=>showSlide(slideIndex+1),5000)}
 function restartAutoplay(){if(slideTimer)clearInterval(slideTimer);if(slides.length>1)startAutoplay()}
 window.changeSlide=changeSlide;
+(function(){
+  const vp=document.querySelector('.slideshow-viewport');let sx=null;
+  vp.addEventListener('mouseenter',()=>{if(slideTimer){clearInterval(slideTimer);slideTimer=null}});
+  vp.addEventListener('mouseleave',()=>{if(!slideTimer&&slides.length>1)startAutoplay()});
+  vp.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
+  vp.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(dx)>40&&slides.length>1)changeSlide(dx<0?1:-1)});
+  document.addEventListener('keydown',e=>{if(slides.length<2)return;const r=vp.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;if(e.key==='ArrowRight')changeSlide(1);if(e.key==='ArrowLeft')changeSlide(-1)});
+})();
 pruneMissingSlides();
 </script>
 </body>
