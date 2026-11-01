@@ -3,6 +3,14 @@
     {
       "source": "/support/(.*)",
       "destination": "/support/$1"
+    },
+    {
+      "source": "/insiders",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/insiders/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
