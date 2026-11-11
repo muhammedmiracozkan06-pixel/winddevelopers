@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Information &amp; Press | Wind Developers</title>
+<meta name="description" content="Wind Developers company information, press contact, logo downloads, brand guidelines, colors and typography.">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="apple-touch-icon" href="/logo.png">
+<meta name="theme-color" content="#ffffff">
+<style>
+:root{
+  --bg:#fff;--surface:#f4f7fb;--ink:#0f1c2e;--soft:#4b5b70;--line:#dce4ee;
+  --a:#0067b8;--a-d:#004f93;--a-l:#e6f1fb;--navy:#0a1930;--navy-2:#10294d;
+  --r:16px;--r-sm:10px;
+  --sans:'Segoe UI Variable','Segoe UI','Segoe UI Web (West European)',-apple-system,BlinkMacSystemFont,Inter,Roboto,'Helvetica Neue',Arial,sans-serif;
+  --sh1:0 1px 2px rgba(15,28,46,.06),0 2px 8px rgba(15,28,46,.05);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--a);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.86);-webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1120px;margin:0 auto;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink)}
+.brand:hover{text-decoration:none}
+.brand img{height:30px;width:auto}
+.back{font-size:.9rem;font-weight:600}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;padding:72px 5% 64px}
+.wrap{max-width:1120px;margin:0 auto}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:14px}
+.hero p{max-width:640px;color:#c9d8ea;font-size:1.1rem}
+.toc{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.toc a{padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.1);color:#fff;font-size:.88rem;font-weight:600;border:1px solid rgba(255,255,255,.18)}
+.toc a:hover{background:rgba(255,255,255,.2);text-decoration:none}
+section{padding:64px 5%}
+section:nth-of-type(even){background:var(--surface)}
+h2{font-size:1.7rem;letter-spacing:-.01em;margin-bottom:8px}
+.lead{color:var(--soft);max-width:680px;margin-bottom:32px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--sh1)}
+.card h3{font-size:1.05rem;margin-bottom:6px}
+.card p,.card li{color:var(--soft);font-size:.95rem}
+.card ul{padding-left:18px;margin-top:6px}
+.facts{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.fact{display:grid;grid-template-columns:180px 1fr;gap:16px;padding:16px 22px;border-bottom:1px solid var(--line)}
+.fact:last-child{border-bottom:0}
+.fact b{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.logo-box{display:grid;place-items:center;border-radius:var(--r-sm);border:1px solid var(--line);min-height:150px;padding:24px}
+.logo-box img{max-height:70px;max-width:100%}
+.on-light{background:#fff}.on-dark{background:var(--navy)}.on-tint{background:var(--a-l)}
+.btn{display:inline-block;margin-top:14px;padding:10px 20px;border-radius:999px;background:var(--a);color:#fff;font-weight:600;font-size:.9rem}
+.btn:hover{background:var(--a-d);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--a);border:1px solid var(--a)}
+.dos{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.do h3{color:#0a7a3d}.dont h3{color:#b42318}
+.swatches{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.sw{border-radius:var(--r-sm);overflow:hidden;border:1px solid var(--line);background:#fff}
+.sw i{display:block;height:84px}
+.sw div{padding:12px 14px;font-size:.85rem;color:var(--soft)}
+.sw b{display:block;color:var(--ink);font-size:.92rem}
+.sw code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.8rem}
+.type-sample{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.type-sample .big{font-size:2.4rem;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.type-sample .body{margin-top:10px;color:var(--soft);max-width:640px}
+.type-sample .meta{margin-top:18px;font-size:.85rem;color:var(--soft)}
+footer{background:#071326;color:#8fa3bb;padding:40px 5%;font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:#8fa3bb}
+@media(max-width:640px){.fact{grid-template-columns:1fr;gap:4px}section{padding:48px 5%}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-in">
+  <a class="brand" href="/"><img src="/logo.png" alt=""><span>Wind Developers</span></a>
+  <a class="back" href="/">&larr; Back to home</a>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <h1>Company Information &amp; Press</h1>
+  <p>Everything you need to write about Wind Developers: company facts, our logo and how to use it, brand colors, typography and press contact.</p>
+  <nav class="toc" aria-label="On this page">
+    <a href="#company">Company</a><a href="#logo">Logo</a><a href="#guidelines">Usage rules</a><a href="#colors">Colors</a><a href="#typography">Typography</a><a href="#contact">Press contact</a>
+  </nav>
+</div></div>
+
+<section id="company"><div class="wrap">
+  <h2>Company information</h2>
+  <p class="lead">Wind Developers is a software company building an ecosystem of operating system, browser, communication and AI products.</p>
+  <div class="facts">
+    <div class="fact"><b>Company name</b><span>Wind Developers</span></div>
+    <div class="fact"><b>Website</b><span><a href="https://winddevelopers.cc.cd/">winddevelopers.cc.cd</a></span></div>
+    <div class="fact"><b>Industry</b><span>Software &amp; technology</span></div>
+    <div class="fact"><b>Products</b><span>WindexOS, Webrix Browser, WindStore, Developers Studio, Matylo AI, WMail, QeChat</span></div>
+    <div class="fact"><b>Contact</b><span><a href="mailto:supportwinddevs@gmail.com">supportwinddevs@gmail.com</a></span></div>
+  </div>
+</div></section>
+
+<section id="logo"><div class="wrap">
+  <h2>Logo</h2>
+  <p class="lead">Use the official logo file below. Do not recreate or redraw it.</p>
+  <div class="grid">
+    <div class="card"><div class="logo-box on-light"><img src="/logo.png" alt="Wind Developers logo on a light background"></div><h3 style="margin-top:16px">On light backgrounds</h3><p>Primary use. PNG.</p><a class="btn" href="/logo.png" download="wind-developers-logo.png">Download PNG</a></div>
+    <div class="card"><div class="logo-box on-tint"><img src="/logo.png" alt="Wind Developers logo on a tinted background"></div><h3 style="margin-top:16px">On light tinted backgrounds</h3><p>Allowed when contrast stays clear.</p><a class="btn ghost" href="/logo.png" download="wind-developers-logo.png">Download PNG</a></div>
+    <div class="card"><div class="logo-box on-dark"><img src="/logo.png" alt="Wind Developers logo on a dark background"></div><h3 style="margin-top:16px">On dark backgrounds</h3><p>Only if the logo stays clearly readable. If not, place it on a white panel.</p><a class="btn ghost" href="/logo.png" download="wind-developers-logo.png">Download PNG</a></div>
+  </div>
+</div></section>
+
+<section id="guidelines"><div class="wrap">
+  <h2>Logo usage rules</h2>
+  <p class="lead">Simple rules to keep our brand consistent everywhere it appears.</p>
+  <div class="dos">
+    <div class="card do"><h3>Do</h3><ul>
+      <li>Keep clear space around the logo equal to at least the height of one letter of the name.</li>
+      <li>Keep the original proportions when resizing.</li>
+      <li>Keep the logo at least 24 px tall on screens and 10 mm tall in print.</li>
+      <li>Place it on backgrounds with strong contrast.</li>
+      <li>Write the name as "Wind Developers" in text.</li>
+    </ul></div>
+    <div class="card dont"><h3>Don't</h3><ul>
+      <li>Stretch, squash, rotate or skew the logo.</li>
+      <li>Change its colors or add effects such as shadows, glows or outlines.</li>
+      <li>Place it on busy images or low-contrast backgrounds.</li>
+      <li>Redraw it, crop it or add elements to it.</li>
+      <li>Suggest endorsement or partnership by Wind Developers without written permission.</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section id="colors"><div class="wrap">
+  <h2>Brand colors</h2>
+  <p class="lead">The colors used across winddevelopers.cc.cd.</p>
+  <div class="swatches">
+    <div class="sw"><i style="background:#0067b8"></i><div><b>Wind Blue</b><code>#0067B8</code><br>RGB 0, 103, 184</div></div>
+    <div class="sw"><i style="background:#004f93"></i><div><b>Deep Blue</b><code>#004F93</code><br>RGB 0, 79, 147</div></div>
+    <div class="sw"><i style="background:#e6f1fb"></i><div><b>Sky Tint</b><code>#E6F1FB</code><br>RGB 230, 241, 251</div></div>
+    <div class="sw"><i style="background:#0a1930"></i><div><b>Navy</b><code>#0A1930</code><br>RGB 10, 25, 48</div></div>
+    <div class="sw"><i style="background:#0f1c2e"></i><div><b>Ink</b><code>#0F1C2E</code><br>RGB 15, 28, 46</div></div>
+    <div class="sw"><i style="background:#f4f7fb"></i><div><b>Surface</b><code>#F4F7FB</code><br>RGB 244, 247, 251</div></div>
+  </div>
+</div></section>
+
+<section id="typography"><div class="wrap">
+  <h2>Typography</h2>
+  <p class="lead">We use the Segoe UI family, with system fonts as fallback so text stays fast and consistent on every device.</p>
+  <div class="type-sample">
+    <div class="big">Wind Developers</div>
+    <p class="body">Headings use Segoe UI Bold with slightly tight letter spacing. Body text uses Segoe UI Regular at a comfortable line height of about 1.65.</p>
+    <p class="meta"><b>Font stack:</b> Segoe UI Variable, Segoe UI, -apple-system, BlinkMacSystemFont, Inter, Roboto, Helvetica Neue, Arial, sans-serif</p>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Press contact</h2>
+  <p class="lead">For interviews, press questions, logo permissions or media requests, write to us.</p>
+  <div class="card" style="max-width:520px">
+    <h3>Wind Developers Press</h3>
+    <p><a href="mailto:supportwinddevs@gmail.com">supportwinddevs@gmail.com</a></p>
+    <a class="btn" href="mailto:supportwinddevs@gmail.com?subject=Press%20inquiry">Send a press inquiry</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>&copy; 2026 Wind Developers. All rights reserved.</span>
+  <a href="/">winddevelopers.duckdns.org</a>
+</div></footer>
+
+</body>
+</html>
